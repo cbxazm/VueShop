@@ -31,8 +31,8 @@
           return {
             //这里是登录表单的数据绑定对象
             loginForm:{
-              username:'',
-              password:''
+              username:'admin',
+              password:'123456'
             },
             //这里是表单的验证规则对象
             loginFormRules:{
@@ -70,7 +70,7 @@
                  * 只在网站打开期间有效，所以我们使用sessionStorage
                  */
                 console.log(res);
-             window.sessionStorage.setItem("token",res.data.data.token)
+                 window.sessionStorage.setItem("token",res.data.data.token)
                 this.$router.push('/home')
               } else {
                 return this.$message.error("登录失败");
